@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CampQuest — Find Camps & Programs in Essex County, NJ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Camp<span>Quest</span></a>
+      <div class="nav-links">
+        <a href="directory.html">Browse Programs</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Essex County, New Jersey</p>
+      <h1>Find the right camp.<br/>Skip the guesswork.</h1>
+      <p class="hero-sub">CampQuest brings together every summer camp, after-school program, and youth activity in your area — all in one place.</p>
+      <div class="hero-search">
+        <input type="text" id="heroSearch" placeholder="Search by name, sport, or keyword..." />
+        <button onclick="heroGo()">Search</button>
+      </div>
+      <div class="hero-tags">
+        <span onclick="goFilter('type','Sports')">⚽ Sports</span>
+        <span onclick="goFilter('type','Arts')">🎨 Arts</span>
+        <span onclick="goFilter('type','Academic')">📚 Academic</span>
+        <span onclick="goFilter('type','STEM')">🔬 STEM</span>
+        <span onclick="goFilter('type','General')">🏕️ General</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card fc1">
+        <div class="fc-dot sports"></div>
+        <div>
+          <strong>South Orange Soccer Camp</strong>
+          <span>Ages 6–14 · South Orange</span>
+        </div>
+      </div>
+      <div class="floating-card fc2">
+        <div class="fc-dot arts"></div>
+        <div>
+          <strong>Maplewood Arts Studio</strong>
+          <span>Ages 8–16 · Maplewood</span>
+        </div>
+      </div>
+      <div class="floating-card fc3">
+        <div class="fc-dot stem"></div>
+        <div>
+          <strong>Livingston STEM Academy</strong>
+          <span>Ages 10–17 · Livingston</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><strong>40+</strong><span>Programs Listed</span></div>
+    <div class="stat"><strong>5</strong><span>Towns Covered</span></div>
+    <div class="stat"><strong>Free</strong><span>To Browse</span></div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="about">
+    <div class="section-inner">
+      <p class="section-label">How it works</p>
+      <h2>Simple for parents.<br/>Simple for programs.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Search & Filter</h3>
+          <p>Browse programs by town, age group, type, and price. Everything is in one place so you're not hunting across Facebook groups and town websites.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Compare Listings</h3>
+          <p>See dates, pricing, age ranges, and descriptions side by side. No phone calls just to find out if there's still a spot.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Reach Out Directly</h3>
+          <p>Each listing has direct contact info so you can register with the program on their terms — no middleman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED LISTINGS PREVIEW -->
+  <section class="featured">
+    <div class="section-inner">
+      <p class="section-label">Featured programs</p>
+      <h2>What's happening this summer</h2>
+      <div class="cards-grid" id="featuredGrid"></div>
+      <div class="browse-cta">
+        <a href="directory.html" class="btn-primary">Browse All Programs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo">Camp<span>Quest</span></a>
+      <p>Serving South Orange · Maplewood · Millburn · West Orange · Livingston</p>
+      <p class="footer-small">© 2025 CampQuest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Render featured cards (first 3)
+    const grid = document.getElementById('featuredGrid');
+    const featured = camps.slice(0, 3);
+    featured.forEach(c => {
+      grid.innerHTML += buildCard(c);
+    });
+
+    function heroGo() {
+      const q = document.getElementById('heroSearch').value.trim();
+      if (q) window.location.href = `directory.html?q=${encodeURIComponent(q)}`;
+      else window.location.href = 'directory.html';
+    }
+
+    function goFilter(key, val) {
+      window.location.href = `directory.html?${key}=${encodeURIComponent(val)}`;
+    }
+
+    document.getElementById('heroSearch').addEventListener('keydown', e => {
+      if (e.key === 'Enter') heroGo();
+    });
+  </script>
+</body>
+</html>

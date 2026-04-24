@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Programs — CampQuest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Camp<span>Quest</span></a>
+      <div class="nav-links">
+        <a href="directory.html" class="active">Browse Programs</a>
+        <a href="index.html#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DIRECTORY HEADER -->
+  <div class="dir-header">
+    <div class="section-inner">
+      <h1>Browse Programs</h1>
+      <p>Essex County, NJ — Summer camps & after-school programs</p>
+    </div>
+  </div>
+
+  <!-- SEARCH + FILTERS -->
+  <div class="filter-bar">
+    <div class="section-inner filter-inner">
+      <input type="text" id="searchInput" placeholder="Search programs..." />
+      <select id="filterTown">
+        <option value="">All Towns</option>
+        <option>South Orange</option>
+        <option>Maplewood</option>
+        <option>Millburn</option>
+        <option>West Orange</option>
+        <option>Livingston</option>
+      </select>
+      <select id="filterType">
+        <option value="">All Types</option>
+        <option>Sports</option>
+        <option>Arts</option>
+        <option>Academic</option>
+        <option>STEM</option>
+        <option>General</option>
+      </select>
+      <select id="filterAge">
+        <option value="">All Ages</option>
+        <option value="young">Ages 4–8</option>
+        <option value="mid">Ages 9–13</option>
+        <option value="teen">Ages 14+</option>
+      </select>
+      <button id="clearBtn" onclick="clearFilters()">Clear</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="dir-body">
+    <div class="section-inner">
+      <p class="results-count" id="resultsCount"></p>
+      <div class="cards-grid" id="directoryGrid"></div>
+      <p class="no-results" id="noResults" style="display:none;">No programs match your search. Try adjusting your filters.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo">Camp<span>Quest</span></a>
+      <p>Serving South Orange · Maplewood · Millburn · West Orange · Livingston</p>
+      <p class="footer-small">© 2025 CampQuest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Read URL params on load
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('q')) document.getElementById('searchInput').value = params.get('q');
+    if (params.get('type')) document.getElementById('filterType').value = params.get('type');
+    if (params.get('town')) document.getElementById('filterTown').value = params.get('town');
+
+    renderDirectory();
+
+    ['searchInput','filterTown','filterType','filterAge'].forEach(id => {
+      document.getElementById(id).addEventListener('input', renderDirectory);
+      document.getElementById(id).addEventListener('change', renderDirectory);
+    });
+
+    function renderDirectory() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const town = document.getElementById('filterTown').value;
+      const type = document.getElementById('filterType').value;
+      const age = document.getElementById('filterAge').value;
+
+      let results = camps.filter(c => {
+        const matchQ = !q || c.name.toLowerCase().includes(q) || c.description.toLowerCase().includes(q) || c.tags.some(t => t.toLowerCase().includes(q));
+        const matchTown = !town || c.town === town;
+        const matchType = !type || c.type === type;
+        const matchAge = !age || matchAgeFilter(c, age);
+        return matchQ && matchTown && matchType && matchAge;
+      });
+
+      const grid = document.getElementById('directoryGrid');
+      const count = document.getElementById('resultsCount');
+      const none = document.getElementById('noResults');
+
+      count.textContent = `${results.length} program${results.length !== 1 ? 's' : ''} found`;
+
+      if (results.length === 0) {
+        grid.innerHTML = '';
+        none.style.display = 'block';
+      } else {
+        none.style.display = 'none';
+        grid.innerHTML = results.map(c => buildCard(c)).join('');
+      }
+    }
+
+    function matchAgeFilter(camp, filter) {
+      const min = camp.ageMin;
+      const max = camp.ageMax;
+      if (filter === 'young') return min <= 8;
+      if (filter === 'mid') return max >= 9 && min <= 13;
+      if (filter === 'teen') return max >= 14;
+      return true;
+    }
+
+    function clearFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('filterTown').value = '';
+      document.getElementById('filterType').value = '';
+      document.getElementById('filterAge').value = '';
+      renderDirectory();
+    }
+  </script>
+</body>
+</html>
