@@ -796,7 +796,7 @@ const camps = [
     website: "https://www.hellosoma.com/summer-camps",
     tags: ["fencing", "sports", "Olympic", "indoor", "skills"],
     featured: false
-  }
+  },
 
 // ============================================================
 // LIVINGSTON LISTINGS — add these to your campData array
