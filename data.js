@@ -798,4 +798,544 @@ const camps = [
     featured: false
   }
 
+// ============================================================
+// LIVINGSTON LISTINGS — add these to your campData array
+// ============================================================
+
+  {
+    id: "liv-001",
+    name: "Livingston Recreation Kids' Camp",
+    town: "Livingston",
+    type: ["general", "municipal"],
+    description: "The flagship Livingston Rec summer camp for grades 1–6. Two pool days per week at Haines Pool, arts and crafts, STEM classes, sports, gaga, water play, and optional field trips. Full-day and half-day options available.",
+    ageMin: 6,
+    ageMax: 12,
+    dates: "June 24 – August 7, 2026 (no camp July 3)",
+    price: "Contact for 2026 rates",
+    location: "Mount Pleasant Middle School, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/1121/Kids-Camp-Grades-1---6-Fall-2026",
+    tags: ["day camp", "sports", "arts", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-002",
+    name: "Livingston Recreation Kiddie Camp (Preschool)",
+    town: "Livingston",
+    type: ["general", "municipal"],
+    description: "Introductory camp experience for Pre-K and Kindergarten children. Daily crafts, story time, outdoor playground, songs, and games. Small groups, big smiles. Half-day and full-day options.",
+    ageMin: 3,
+    ageMax: 6,
+    dates: "June 24 – August 7, 2026",
+    price: "$200/week",
+    location: "Monmouth Court Community Center, 26 Monmouth Court, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/792/Kiddie-Camp---Preschool",
+    tags: ["day camp", "preschool", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-003",
+    name: "Livingston Recreation Tots Camp",
+    town: "Livingston",
+    type: ["general", "municipal"],
+    description: "Designed for 2–3 year olds (DOB 10/1/22–9/30/23), this half-day camp is a wonderful first socialization experience. Daily crafts, songs, storytime, and parachute play in the preschool wing.",
+    ageMin: 2,
+    ageMax: 3,
+    dates: "June 24 – August 7, 2026",
+    price: "Contact for 2026 rates",
+    location: "Livingston Senior/Community Center, 204 Hillside Avenue, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/794/Tots-Camp-2-to-3-years-old",
+    tags: ["toddler", "preschool", "day camp", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-004",
+    name: "Livingston Recreation Teen Travel Camp",
+    town: "Livingston",
+    type: ["travel", "municipal"],
+    description: "Field trips every day Monday–Thursday, plus a pool day on Fridays at Haines Pool Complex. Six weeks of adventure for incoming 7th and 8th graders. Resident and non-resident pricing available.",
+    ageMin: 12,
+    ageMax: 14,
+    dates: "June 29 – August 7, 2026 (six weeks)",
+    price: "$700/week resident; $800/week non-resident",
+    location: "Drop-off/pick-up: Livingston Senior/Community Center, 204 Hillside Avenue",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/783/Teen-Travel-Grades-7-8-Fall-2026",
+    tags: ["teen", "travel", "day camp", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-005",
+    name: "Lancer Sports Camps",
+    town: "Livingston",
+    type: ["sports", "municipal"],
+    description: "Sport-specific week-long camps run by Livingston High School's own coaching staff. Options include basketball, soccer, tennis, flag rugby, baseball, football, volleyball, field hockey, speed & agility track, and martial arts. Afternoon pool time at Haines Pool included with all full-day camps.",
+    ageMin: 9,
+    ageMax: 14,
+    dates: "Various weeks June 29 – August 7, 2026",
+    price: "$300/week resident; $400/week non-resident",
+    location: "Livingston High School & Haines Pool, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/709/Lancer-Sport-Camps-SUMMER",
+    tags: ["sports", "basketball", "soccer", "tennis", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-006",
+    name: "Livingston Recreation Theater & Dance Camp",
+    town: "Livingston",
+    type: ["arts", "performing arts", "municipal"],
+    description: "NYC-caliber dance and theater training brought to Livingston. Ballet, tap, jazz, Broadway musical theater, vocal technique, acting, monologue, and improv. All ages K–10th grade, grouped by age and ability. Culminates in a Cabaret Show for families on August 21.",
+    ageMin: 5,
+    ageMax: 16,
+    dates: "August 10 – 21, 2026",
+    price: "$650 resident; $750 non-resident",
+    location: "Livingston Senior/Community Center, 204 Hillside Avenue (lower level)",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/800/Theater-Dance-Camp",
+    tags: ["performing arts", "dance", "theater", "arts", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-007",
+    name: "Code Ninjas Summer Camp (Livingston)",
+    town: "Livingston",
+    type: ["STEM", "coding"],
+    description: "Weekly coding camps for grades K–5 in partnership with Livingston Rec. Game-based curriculum that teaches sequencing, events, and loops through hands-on challenges including robotics (LEGO Spike), Minecraft modding, and AI filmmaking using YouTube's AI Playground.",
+    ageMin: 5,
+    ageMax: 11,
+    dates: "Various weeks, Summer 2026",
+    price: "Contact for 2026 rates",
+    location: "Livingston Senior/Community Center, 204 Hillside Avenue",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/1158/Code-Ninjas-Weekly-Summer-Camp-2026",
+    tags: ["STEM", "coding", "robotics", "technology", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-008",
+    name: "Creatif Art & STEM Camp (Livingston)",
+    town: "Livingston",
+    type: ["arts", "STEM"],
+    description: "Weekly themed art and STEM camps for ages 5–10 in Creatif's award-winning Livingston studio. Campers explore painting, ceramics, clay, and mixed media while building teamwork and critical thinking. Full-day and half-day options.",
+    ageMin: 5,
+    ageMax: 10,
+    dates: "Various weekly sessions, Summer 2026",
+    price: "Contact for 2026 rates",
+    location: "Creatif Livingston, Livingston, NJ",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "https://www.creatif.com/livingston-nj/camp/",
+    tags: ["arts", "STEM", "creative", "private"],
+    featured: false
+  },
+
+  {
+    id: "liv-009",
+    name: "VSA Future Educational Summer Camp",
+    town: "Livingston",
+    type: ["academic"],
+    description: "Academic enrichment camp blending language arts, reading comprehension, public speaking, and vocabulary Mon–Thu with Mad Science and themed creative activities on Fridays. Small classes, individual attention, grades K–6. Full-day and half-day available.",
+    ageMin: 5,
+    ageMax: 12,
+    dates: "July 20 – August 14, 2026 (weekly enrollment)",
+    price: "Contact for 2026 rates",
+    location: "VSA Future, Livingston, NJ",
+    contact: "admin@vsafuture.com",
+    phone: "Contact for info",
+    website: "https://vsafuture.com/summer-camp-vsa/",
+    tags: ["academic", "enrichment", "STEM", "reading", "private"],
+    featured: false
+  },
+
+  {
+    id: "liv-010",
+    name: "Musical Theatre Conservatory Broadway Boot Camp",
+    town: "Livingston",
+    type: ["performing arts", "arts"],
+    description: "Three-week intensive for aspiring performers ages 7–19, run by the Musical Theatre Conservatory at their West Orange/Livingston location. Vocal technique, scene study, TV acting, dance, audition coaching, and a live NJ showcase performance. All levels welcome.",
+    ageMin: 7,
+    ageMax: 19,
+    dates: "July 7 – 25, 2026",
+    price: "Contact for 2026 rates",
+    location: "Musical Theatre Conservatory, West Orange/Livingston, NJ",
+    contact: "Contact via website",
+    phone: "973-868-6259",
+    website: "https://www.musicaltheatreconservatory.com",
+    tags: ["performing arts", "theater", "voice", "dance", "private"],
+    featured: false
+  },
+
+
+// ============================================================
+// MILLBURN LISTINGS — add these to your campData array
+// ============================================================
+
+  {
+    id: "mil-001",
+    name: "Millburn Recreation Mini-Day Camp",
+    town: "Millburn",
+    type: ["general", "municipal"],
+    description: "Millburn Rec's half-day summer camp for young children. Daily activities, crafts, games, and themed adventures in a fun, structured environment.",
+    ageMin: 4,
+    ageMax: 8,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Township Recreation, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["day camp", "preschool", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-002",
+    name: "Millburn Recreation Junior Day Camp",
+    town: "Millburn",
+    type: ["general", "municipal"],
+    description: "Full-day summer camp for elementary-age kids through Millburn Township Recreation. Sports, crafts, swimming, and weekly themed fun in a classic camp environment.",
+    ageMin: 6,
+    ageMax: 11,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Township Recreation, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["day camp", "general", "sports", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-003",
+    name: "Millburn Recreation TGIS Camp (Ages 11–14)",
+    town: "Millburn",
+    type: ["general", "municipal"],
+    description: "Summer camp designed for tweens and early teens ages 11–14. Activities, field trips, and social experiences geared specifically for older campers.",
+    ageMin: 11,
+    ageMax: 14,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Township Recreation, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["teen", "day camp", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-004",
+    name: "Millburn Recreation Summer Sports Camps (USA Sport Group)",
+    town: "Millburn",
+    type: ["sports", "municipal"],
+    description: "Multi-sport and single-sport summer camps through Millburn Rec in partnership with USA Sport Group. Options include soccer, tennis, lacrosse, basketball, golf, flag football, and multi-sport. Age-appropriate and suitable for all ability levels, ages 2–18.",
+    ageMin: 2,
+    ageMax: 18,
+    dates: "Various weekly sessions, Summer 2026",
+    price: "Contact for 2026 rates",
+    location: "Various Millburn Recreation sites, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://usasportgroup.com/recreation/156-millburn-recreation-millburn-nj",
+    tags: ["sports", "soccer", "tennis", "multi-sport", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-005",
+    name: "Paper Mill Playhouse Summer Studio",
+    town: "Millburn",
+    type: ["performing arts", "arts"],
+    description: "Four weeks of acting, dance, and musical theatre workshops at New Jersey's most acclaimed professional theater. Limited spots that sell out every summer. Part of Paper Mill's broader summer training offerings which include an audition-based Conservatory and Musical Theater Intensive for serious performers ages 10–18.",
+    ageMin: 8,
+    ageMax: 18,
+    dates: "June 29 – August 21, 2026",
+    price: "Contact for 2026 rates",
+    location: "Paper Mill Playhouse, 22 Brookside Drive, Millburn, NJ 07041",
+    contact: "summer@papermill.org",
+    phone: "973-376-4343",
+    website: "https://papermill.org/education/summer-training/camp/",
+    tags: ["performing arts", "theater", "dance", "musical theater", "private"],
+    featured: true
+  },
+
+  {
+    id: "mil-006",
+    name: "Performers Theatre Workshop (PTW) Summer Camp",
+    town: "Millburn",
+    type: ["performing arts", "arts"],
+    description: "NJ's premier performing arts school, founded by Juilliard graduates, offers multiple summer programs at their state-of-the-art Millburn facility. PTW Junior Camp (ages 5–8) covers singing, acting, and dance over three-week sessions. The Summer Broadway Showcase & Conservatory (ages 9–18) trains performers in musical theater, voice, acting, and dance — culminating in a live NYC showcase at 54 Below attended by industry agents and managers.",
+    ageMin: 5,
+    ageMax: 18,
+    dates: "Multiple sessions, June 30 – August 2026",
+    price: "Contact for 2026 rates",
+    location: "131 Millburn Ave, Millburn, NJ 07041",
+    contact: "ptwstars@gmail.com",
+    phone: "973-327-2250",
+    website: "https://ptwonline.com/summer-programs/",
+    tags: ["performing arts", "theater", "voice", "dance", "private"],
+    featured: false
+  },
+
+  {
+    id: "mil-007",
+    name: "One River School Summer Art Camps (Millburn)",
+    town: "Millburn",
+    type: ["arts"],
+    description: "90+ weekly half-day and full-day art camps run by practicing artists, designers, and animators. Covers drawing, painting, digital art, Procreate, animation, and contemporary techniques. Camps for kids and teens; bundle morning and afternoon for a full day. Friday parent showcases each week.",
+    ageMin: 5,
+    ageMax: 18,
+    dates: "10 weeks of camps, Summer 2026 (various start dates)",
+    price: "Contact for 2026 rates",
+    location: "One River School, Millburn, NJ",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "https://millburn.oneriverschool.com/camps/",
+    tags: ["arts", "visual arts", "creative", "animation", "private"],
+    featured: false
+  },
+
+  {
+    id: "mil-008",
+    name: "Lou Ruina Summer Golf Camp",
+    town: "Millburn",
+    type: ["sports", "municipal"],
+    description: "Summer golf camp for youth at the Millburn Par 3 Golf Course, run through Millburn Township Recreation. Hands-on instruction on the 9-hole, par-3 tree-lined course in Short Hills.",
+    ageMin: 7,
+    ageMax: 16,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Par 3 Golf Course, 335 White Oak Ridge Road, Short Hills, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["sports", "golf", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-009",
+    name: "Genius Gems STEM Mini-Camps (Millburn)",
+    town: "Millburn",
+    type: ["STEM"],
+    description: "Single-day drop-in STEM mini-camps for kindergartners and up at the Millburn location. Each day has a different theme — Mad Science Lab, Tech & Innovation, Code & Create — with hands-on projects and magnetic tile building. Flexible, à-la-carte scheduling.",
+    ageMin: 5,
+    ageMax: 12,
+    dates: "Various days, Summer 2026",
+    price: "$115/day",
+    location: "Genius Gems, Millburn, NJ",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "https://geniusgems.com/products/mini-camps-nj",
+    tags: ["STEM", "science", "coding", "private"],
+    featured: false
+  },
+
+  {
+    id: "mil-010",
+    name: "International Ivy Enrichment Summer Camp (Short Hills)",
+    town: "Millburn",
+    type: ["academic"],
+    description: "Small-group (max 10 students) academic enrichment summer camp in Short Hills. Half-day and full-day options with morning and afternoon sessions. Early registration discounts available through spring.",
+    ageMin: 5,
+    ageMax: 14,
+    dates: "Summer 2026 (contact for exact schedule)",
+    price: "$480/week half-day; $960/week full-day",
+    location: "Short Hills, NJ (Millburn Township)",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "https://iisummer.com/short-hills/",
+    tags: ["academic", "enrichment", "small group", "private"],
+    featured: false
+  },
+  
+// ============================================================
+// ADDITIONAL LIVINGSTON LISTINGS — paste into campData array
+// ============================================================
+
+  {
+    id: "liv-011",
+    name: "West Essex YMCA Summer Day Camps",
+    town: "Livingston",
+    type: ["general", "sports"],
+    description: "The only ACA-accredited camps in Livingston, with four distinct programs: Summer Sprouts (ages 3–5, pre-K only), Pioneer Trails (grades K–8, traditional day camp), Super Summer (grades K–6), and Teen Adventure Day Camp (grades 7–9). Financial assistance available through the Y for All Fund. Financial assistance available for families who qualify.",
+    ageMin: 3,
+    ageMax: 15,
+    dates: "Summer 2026 (contact for exact dates and rates)",
+    price: "From $350/week; contact for full rate schedule",
+    location: "West Essex YMCA, 321 S. Livingston Ave, Livingston, NJ 07039",
+    contact: "Contact via website",
+    phone: "973-992-7500",
+    website: "https://livingstonymcacamp.org/summer-camp",
+    tags: ["day camp", "general", "sports", "swimming", "ACA-accredited"],
+    featured: false
+  },
+
+  {
+    id: "liv-012",
+    name: "Livingston Recreation Last Blast Camp",
+    town: "Livingston",
+    type: ["general", "municipal"],
+    description: "End-of-summer day camp held at Haines Pool for grades 1–6. Swimming, basketball, arts & crafts, games, and playground. Register per day or per week — flexible scheduling for late summer.",
+    ageMin: 6,
+    ageMax: 12,
+    dates: "Late summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Mervyn V.T. Haines Community Pool, 10 Wahler Road, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/994/Last-Blast-Camp",
+    tags: ["day camp", "swimming", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "liv-013",
+    name: "Jump! Immersion Spanish & Mandarin Summer Camp",
+    town: "Livingston",
+    type: ["academic", "language"],
+    description: "Language immersion summer camp for ages 3–11 offering Spanish or Mandarin Chinese. Authentic cultural games, outdoor activities, arts & crafts, and friendships in a fully immersive environment. Two-, three-, or five-day weekly options with before/after care available.",
+    ageMin: 3,
+    ageMax: 11,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Jump Immersion School, 264 W. Northfield Rd, Livingston, NJ",
+    contact: "Contact via website",
+    phone: "732-371-2221",
+    website: "https://jumpimmersion.com/registration-summer-camp",
+    tags: ["language", "immersion", "Spanish", "Mandarin", "academic", "private"],
+    featured: false
+  },
+
+  {
+    id: "liv-014",
+    name: "Snapology STEM/STEAM Summer Camps (Livingston)",
+    town: "Livingston",
+    type: ["STEM"],
+    description: "Weekly themed STEM/STEAM camps using LEGO bricks, coding, robotics, and science for ages 5–12. Camps run year-round with school-break options too. A hands-on learning environment focused on creativity, critical thinking, and collaboration.",
+    ageMin: 5,
+    ageMax: 12,
+    dates: "Various weekly sessions, Summer 2026",
+    price: "Contact for 2026 rates",
+    location: "Snapology, Livingston, NJ",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "https://www.snapology.com/new-jersey-livingston/camps/",
+    tags: ["STEM", "STEAM", "robotics", "coding", "LEGO", "private"],
+    featured: false
+  },
+
+  {
+    id: "liv-015",
+    name: "Ady Art Center Dance & Arts Summer Camp",
+    town: "Livingston",
+    type: ["arts", "dance"],
+    description: "Summer camp from a Livingston dance studio and art center offering classes in dance, music, visual arts, and performance. Open to children of various ages in a creative, nurturing studio environment.",
+    ageMin: 4,
+    ageMax: 14,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Ady Art Center, Livingston, NJ",
+    contact: "Contact via website",
+    phone: "Contact for info",
+    website: "http://www.adyartcenter.com/camp.html",
+    tags: ["dance", "arts", "music", "private"],
+    featured: false
+  },
+
+  {
+    id: "liv-016",
+    name: "Livingston Recreation Specialty Camps",
+    town: "Livingston",
+    type: ["general", "municipal"],
+    description: "A rotating lineup of specialty week-long camps in August run by Livingston Rec, distinct from the standard Kids' Camp. Specific themes for 2026 will be posted on the town website — check back for updates.",
+    ageMin: 6,
+    ageMax: 12,
+    dates: "August 2026 (exact dates TBA)",
+    price: "Contact for 2026 rates",
+    location: "Livingston Recreation, Livingston, NJ",
+    contact: "recreation@livingstonnj.org",
+    phone: "973-535-7925",
+    website: "https://www.livingstonnj.org/1298/Specialty-Camps---August-2026",
+    tags: ["specialty", "general", "municipal"],
+    featured: false
+  },
+
+
+// ============================================================
+// ADDITIONAL MILLBURN LISTINGS — paste into campData array
+// ============================================================
+
+  {
+    id: "mil-011",
+    name: "Genius Gems STEM Summer Camp (Millburn)",
+    town: "Millburn",
+    type: ["STEM"],
+    description: "Wildly popular weekly STEM camp at 215 Millburn Ave for grades K–6 — almost all weeks sold out last summer, so early registration is critical. Weekly themes include Slime Lab, Kitchen Chemistry, Coding & Robots, LEGO Engineering, Mad Science, and Game Design Lab. Half-day ($349/week) at the Millburn studio; full-day ($575/week) at nearby Congregation B'nai Israel. Aftercare available.",
+    ageMin: 5,
+    ageMax: 12,
+    dates: "10 weekly sessions, starting late June 2026",
+    price: "$349/week half-day; $575/week full-day",
+    location: "215 Millburn Ave, Millburn, NJ 07041 (half-day); 160 Millburn Ave at CBI (full-day)",
+    contact: "information@geniusgems.com",
+    phone: "973-376-2623",
+    website: "https://geniusgems.com/pages/summer-2026-preview",
+    tags: ["STEM", "coding", "science", "robotics", "engineering", "private"],
+    featured: false
+  },
+
+  {
+    id: "mil-012",
+    name: "Millburn Recreation Playground Camp",
+    town: "Millburn",
+    type: ["general", "municipal"],
+    description: "A classic outdoor Millburn township playground camp for kids, combining unstructured play with supervised activities in neighborhood parks.",
+    ageMin: 5,
+    ageMax: 11,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Township Recreation, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["day camp", "outdoor", "general", "municipal"],
+    featured: false
+  },
+
+  {
+    id: "mil-013",
+    name: "Coach Nucci Summer Baseball Camp (Millburn)",
+    town: "Millburn",
+    type: ["sports", "municipal"],
+    description: "Baseball-focused summer camp run through Millburn Recreation, offering instruction in hitting, fielding, pitching, and game strategy for youth players.",
+    ageMin: 7,
+    ageMax: 14,
+    dates: "Summer 2026 (contact for exact dates)",
+    price: "Contact for 2026 rates",
+    location: "Millburn Township Recreation, Millburn, NJ",
+    contact: "recreationdept@millburntwp.org",
+    phone: "973-564-7097",
+    website: "https://twp.millburn.nj.us/404/Program-Registration-Forms",
+    tags: ["sports", "baseball", "municipal"],
+    featured: false
+  },
+
 ];
